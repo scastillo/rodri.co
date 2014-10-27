@@ -1,0 +1,305 @@
+
+/*
+ * font-family: 'Fjalla One', sans-serif;
+ * font-family: 'Cuprum', sans-serif;
+ * font-family: 'PT Serif', serif;
+ * font-family: 'Crimson Text', serif;
+ * font-family: 'Satisfy', cursive;
+ */
+@import url(http://fonts.googleapis.com/css?family=PT+Serif|Fjalla+One|Cuprum:400,700,400italic|Crimson+Text|Satisfy);
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fdfdfd
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #8ABE06;
+}
+body {
+  color: #fdfdfd;
+  text-align: center;
+  /* text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  /* -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5); */
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fdfdfd; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fdfdfd;
+  border-bottom-color: #fdfdfd;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  marging: 20px;
+  padding: 20px 20px;
+  min-height: 800px;
+}
+.cover.first{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+}
+
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.cover-heading {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 70px;
+  border-bottom: 3px #6B9C00;
+}
+h3 {
+  font-size: 24px;
+  font-family: 'Fjalla One', sans-serif;
+}
+.cover-sub-heading {
+  font-size: 20px;
+  font-family: 'PT Serif', cursive;
+  color: rgba(255,255,255,.6);
+}
+.row p{
+  font-size: 18px;
+  font-family: 'PT Serif', cursive;
+  color: rgba(255,255,255,.6);
+}
+
+.row{
+  margin-top: 80px;
+}
+
+.cover2{
+  background: #6B9C00;
+}
+
+.cover3{
+  background: #0B9AA5;
+}
+
+.cover4{
+  background: #8ABE06/*#08C162*/;
+
+}
+
+.cover5{
+  background: #9E64B9;
+}
+
+.cover6{
+  background: #B76DC2;
+}
+
+
+hr.dark {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 4px solid #6B9C00;
+  width: 80px;
+}
+
+.cover2 hr{
+  border-color: #8ABE06;
+}
+
+.cover3 hr{
+  border-color: #076C73;
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  /* Fix heading*/
+  .cover{
+    padding: 40px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container{
+    width: 700px;
+  }
+  .section-container{
+    width: 100%;
+  }
+  .cover{
+    padding: 130px 20px;
+  }
+}
+
+.form-control{
+  background: transparent;
+  color: #fdfdfd;
+  border-color: #fdfdfd;
+  font-family: 'PT Serif', cursive;
+}
+
+.btn-blue{
+  color: #0B9AA5;
+  font-size: 20px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.btn-green{
+  color: #6B9C00;
+  font-size: 20px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.btn-blue:focus,
+.btn-blue:hover,
+.btn-blue:active,
+.btn-green:focus,
+.btn-green:hover,
+.btn-green:active{
+  border-color: #fdfdfd;
+  outline-color: #fdfdfd;
+  outline-style: none;
+}
+
+.form-control:focus {
+  border-color: #fdfdfd;
+}
+
+.form-control::-webkit-input-placeholder {
+   color: #fdfdfd;
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: #fdfdfd;
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: #fdfdfd;
+}
+
+.form-control:-ms-input-placeholder {
+   color: #fdfdfd;
+}
